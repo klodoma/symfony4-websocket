@@ -1,0 +1,14 @@
+# Web Socket Configuration
+gos_web_socket:
+    client:
+        firewall: [ main ] # This is the line you must configure to silence the firewall message
+#        storage:
+#            driver: '@cache.websocket' # This is using symfony/cache and defined under the framework.cache.pools node
+#            decorator: '@gos_web_socket.client_storage.symfony.decorator'
+#            ttl: 0
+    server:
+        port: 1337        #The port the socket server will listen on
+        host: 127.0.0.1   #The host ip to bind to
+        router:
+            resources:
+                - '@AppBundle/Resources/config/pubsub/routing.yml'

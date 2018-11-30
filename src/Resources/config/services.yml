@@ -1,0 +1,2 @@
+# The bundle's services are autoconfigured in the app's main services.yml file
+services: ~
